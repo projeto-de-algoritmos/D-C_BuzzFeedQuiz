@@ -3,7 +3,7 @@ import { Card } from "react-bootstrap";
 
 const CardComponent = (props: any) => {
     return (
-        <Card className="mt-5">
+        <Card className="mt-3">
             <Card.Header>Quiz {props.header}</Card.Header>
             <Card.Body>
                 <Card.Img src={props.image} />

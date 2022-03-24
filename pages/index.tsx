@@ -26,7 +26,7 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <Container>
+      <Container className="w-50">
         <CardComponent
           title="Projeto de Algoritmos: Dividir e Conquistar"
           text="Seja bem vindo ao Super Quiz! Informe seu nome e escolha o tema:"
