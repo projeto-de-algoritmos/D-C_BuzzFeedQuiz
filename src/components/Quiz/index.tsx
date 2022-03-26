@@ -2,14 +2,24 @@ import Question from '../../models/Question';
 import { useState, useEffect } from 'react'
 import CardComponent from '../Card';
 import ButtonComponent from '../Button';
-import { Container, Stack } from 'react-bootstrap';
+import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
+import Alternative from '../../models/Alternative';
 
 export default function Quiz({ question, onSubmit }: QuizProps) {
-    const [alternativeSelected, setAlternativeSelected] = useState(-1);
+    const [questionAlternatives, setQuestionAlternatives] = useState<Alternative[]>(question.alternatives);
 
-    function handleSubmit(index: number) {
-        setAlternativeSelected(-1);
-        onSubmit(index);
+    function handleSubmit(questionAlternatives: Alternative[]) {
+        onSubmit(questionAlternatives);
+    }
+
+    function handleOnDragEnd(result: any) {
+        if (!result.destination) return;
+
+        const items = Array.from(questionAlternatives);
+        const [reorderedItem] = items.splice(result.source.index, 1);
+        items.splice(result.destination.index, 0, reorderedItem);
+
+        setQuestionAlternatives(items);
     }
 
     return (
@@ -17,14 +27,29 @@ export default function Quiz({ question, onSubmit }: QuizProps) {
             image={question.imageUri}
             title={question.title}
             text={question.description}>
-            <Stack gap={1}>
-                {question.alternatives.map((questionText, index) => <ButtonComponent
-                    key={index}
-                    variant={index === alternativeSelected ? "primary" : "secondary"}
-                    onClick={() => setAlternativeSelected(index)}
-                    text={questionText} />)}
-            </Stack>
-            <ButtonComponent onClick={() => handleSubmit(alternativeSelected)} disabled={alternativeSelected < 0} text="Confirmar" />
+            <DragDropContext onDragEnd={handleOnDragEnd}>
+                <Droppable droppableId="characters">
+                    {(provided) => (
+                        <ul className="characters" {...provided.droppableProps} ref={provided.innerRef}>
+                            {questionAlternatives.map((alternative, index) => {
+                                return (
+                                    <Draggable key={alternative.text} draggableId={alternative.text} index={index}>
+                                        {(provided) => (
+                                            <li
+                                                key={index}
+                                                ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps}>
+                                                {alternative.text}
+                                            </li>
+                                        )}
+                                    </Draggable>
+                                );
+                            })}
+                            {provided.placeholder}
+                        </ul>
+                    )}
+                </Droppable>
+            </DragDropContext>
+            <ButtonComponent onClick={() => handleSubmit(questionAlternatives)} text="Confirmar" />
         </ CardComponent>
     )
 }

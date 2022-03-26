@@ -8,6 +8,7 @@ import { title } from 'process';
 import Loading from '../../components/Loading';
 import Result from '../../components/Result';
 import selectBestCharacter from '../../utils/selectBestCharacter';
+import Alternative from '../../models/Alternative';
 
 enum ScreenStates {
     QUIZ,
@@ -22,7 +23,7 @@ type Props = {
 export default function QuizScreen({ quizTheme }: Props) {
     const [screenState, setScreenState] = useState<ScreenStates>(ScreenStates.LOADING);
     const [currentQuestion, setCurrentQuestion] = useState(0);
-    const [result, setResult] = useState<number[]>([]);
+    const [result, setResult] = useState<Alternative[]>([]);
     const [character, setCharacter] = useState<Character>();
     const totalQuestions = quizTheme.questions.length;
     const isFirstRun = useRef(true);
@@ -34,7 +35,6 @@ export default function QuizScreen({ quizTheme }: Props) {
     }, []);
 
     useEffect(() => {
-
         if (isFirstRun.current) {
             isFirstRun.current = false;
             return;
@@ -43,16 +43,13 @@ export default function QuizScreen({ quizTheme }: Props) {
         if (currentQuestion + 1 < totalQuestions) {
             setCurrentQuestion(currentQuestion + 1);
         } else {
-            setCharacter(selectBestCharacter(result, quizTheme.characters));
+            setCharacter(selectBestCharacter(result.map((alternative) => alternative.id), quizTheme.characters));
             setScreenState(ScreenStates.RESULT);
         }
     }, [result]);
 
-    function handleSubmit(alternativeIndex: number) {
-        setResult([
-            ...result,
-            alternativeIndex
-        ]);
+    function handleSubmit(alternatives: Alternative[]) {
+        setResult([...result].concat(alternatives));
     }
 
 
