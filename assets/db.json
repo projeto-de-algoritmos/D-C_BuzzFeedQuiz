@@ -6,163 +6,62 @@
         "characters": [
             {
                 "name": "Harry Potter",
-                "description": "Descubra qual personagem do harry potter você seria",
+                "description": "Harry, por um lado, é um bruxo, sabe criar poções mágicas, voar em vassouras e consegue até ficar invisível. Por outro, é um menino normal. Um pouco tímido, companheiro, tem medos, expectativas e às vezes fica furioso.",
+                "image": "https://criticalhits.com.br/wp-content/uploads/2022/03/harry-potter-hbo-max_q8yn.jpg",
                 "answers": [
-                    0,
-                    1,
-                    2,
-                    2,
                     3,
-                    0,
-                    1,
-                    2,
-                    2,
-                    0,
-                    1,
-                    2,
-                    2,
-                    0,
-                    1,
-                    2,
-                    2,
-                    0,
-                    1,
-                    2,
-                    2
+                    8,
+                    11,
+                    13,
+                    17
                 ]
             },
             {
                 "name": "Hermione Granger",
-                "description": "Descubra qual personagem do harry potter você seria",
+                "description": "Hermione é uma garota de personalidade forte. Não se deixa manipular por qualquer coisa, está sempre atenta a qualquer risco. Gosta de pensar antes de agir para que, futuramente, não haja algum prejuízo para ela e seus companheiros",
+                "image": "https://imagens.ne10.uol.com.br/veiculos/_midias/jpg/2021/12/29/806x444/1_hermione_emma_watson_em_harry_potter_reproducao-20372809.jpg",
                 "answers": [
-                    3,
-                    1,
                     2,
-                    4,
-                    3,
-                    1,
-                    4,
-                    2,
-                    4,
-                    3,
-                    1,
-                    2,
-                    1,
-                    4,
-                    3,
-                    2,
-                    1,
-                    4,
-                    3,
-                    2
+                    5,
+                    10,
+                    15,
+                    18
                 ]
             },
             {
                 "name": "Draco Malfoy",
-                "description": "Descubra qual personagem do harry potter você seria",
+                "description": "O comportamento arrogante de Draco Draco foi, em geral, um valentão arrogante e rancoroso durante grande parte de sua educação em Hogwarts.",
+                "image": "https://static1.purebreak.com.br/articles/2/10/48/62/@/448944-draco-malfoy-tom-felton-teria-um-final-opengraph_1200-3.jpg",
                 "answers": [
-                    0,
-                    0,
-                    2,
-                    2,
-                    3,
-                    0,
-                    1,
-                    2,
-                    2,
-                    0,
-                    1,
-                    2,
-                    2,
-                    0,
-                    1,
-                    2,
-                    2,
-                    0,
-                    1,
-                    2,
-                    2
+                    4,
+                    6,
+                    11,
+                    14,
+                    20
                 ]
             },
             {
                 "name": "Ronald Weasley",
-                "description": "Descubra qual personagem do harry potter você seria",
+                "description": "Rony era uma pessoa bastante leal, corajosa, forte e bem humorada, mas às vezes podia ser insensível e imaturo. Ele possuía um senso de humor sarcástico e brincalhão que comumente arrancava risos e diversões de seus amigos.",
+                "image": "https://criticalhits.com.br/wp-content/uploads/2022/01/ron-weasley.jpg",
                 "answers": [
-                    0,
-                    2,
-                    2,
-                    2,
-                    3,
-                    0,
                     1,
-                    2,
-                    2,
-                    0,
-                    1,
-                    2,
-                    2,
-                    0,
-                    1,
-                    2,
-                    2,
-                    0,
-                    1,
-                    2,
-                    2
+                    6,
+                    12,
+                    13,
+                    17
                 ]
             },
             {
                 "name": "Severus Snape",
-                "description": "Descubra qual personagem do harry potter você seria",
+                "description": "Severo Snape é descrito como sendo frio, calculista, cínico, rígido, maldoso, amargo e sarcástico. Apesar de seu comportamento vingativo, Severo Snape foi um homem imensamente corajoso e, da sua própria maneira, tinha uma profunda capacidade para amar.",
+                "image": "https://conteudo.imguol.com.br/c/entretenimento/c0/2018/05/27/alan-rickman-como-o-professor-snape-em-harry-potter-e-as-reliquias-da-morte-parte-2-1527451007240_v2_4x3.jpg",
                 "answers": [
-                    0,
-                    1,
-                    2,
-                    3,
-                    3,
-                    0,
-                    1,
-                    2,
-                    2,
-                    0,
-                    1,
-                    2,
-                    2,
-                    0,
-                    1,
-                    2,
-                    2,
-                    0,
-                    1,
-                    2,
-                    2
-                ]
-            },
-            {
-                "name": "Severus Snape",
-                "description": "Descubra qual personagem do harry potter você seria",
-                "answers": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    3,
-                    0,
-                    1,
-                    2,
-                    2,
-                    0,
-                    1,
-                    2,
-                    2,
-                    0,
-                    1,
-                    2,
-                    2,
-                    0,
-                    1,
-                    2,
-                    2
+                    4,
+                    7,
+                    10,
+                    14,
+                    19
                 ]
             }
         ],
@@ -171,173 +70,1060 @@
         "questions": [
             {
                 "title": "Pergunta 1",
-                "description": "Descrição da pergunta 0",
+                "description": "Você prefere comer, estudar, jogar quadribol ou fazer poções?",
                 "alternatives": [
                     {
-                        "id": 1,
-                        "text": "alternativa 0"
+                        "value": 1,
+                        "text": "Comer"
                     },
                     {
-                        "id": 2,
-                        "text": "alternativa 1"
+                        "value": 2,
+                        "text": "Estudar"
                     },
                     {
-                        "id": 3,
-                        "text": "alternativa 2"
+                        "value": 3,
+                        "text": "Jogar quadribol"
                     },
                     {
-                        "id": 4,
-                        "text": "alternativa 3"
+                        "value": 4,
+                        "text": "Fazer Poções"
                     }
                 ]
             },
             {
                 "title": "Pergunta 2",
-                "description": "Descrição da pergunta 1",
+                "description": "Qual seu lugar preferido em Hogwarts? ",
                 "alternatives": [
                     {
-                        "id": 1,
-                        "text": "alternativa 0"
+                        "value": 5,
+                        "text": "Sala de aula"
                     },
                     {
-                        "id": 2,
-                        "text": "alternativa 1"
+                        "value": 6,
+                        "text": "Salão principal"
                     },
                     {
-                        "id": 3,
-                        "text": "alternativa 2"
+                        "value": 7,
+                        "text": "Torre de astronomia"
                     },
                     {
-                        "id": 4,
-                        "text": "alternativa 3"
+                        "value": 8,
+                        "text": "Campo de quadribol"
                     }
                 ]
             },
             {
                 "title": "Pergunta 3",
-                "description": "Descrição da pergunta 1",
+                "description": "Qual seu lugar proibido favorito?",
                 "alternatives": [
                     {
-                        "id": 1,
-                        "text": "alternativa 0"
+                        "value": 9,
+                        "text": "Floresta proibida"
                     },
                     {
-                        "id": 2,
-                        "text": "alternativa 1"
+                        "value": 10,
+                        "text": "Seção restrita da biblioteca"
                     },
                     {
-                        "id": 3,
-                        "text": "alternativa 2"
+                        "value": 11,
+                        "text": "Sala precisa"
                     },
                     {
-                        "id": 4,
-                        "text": "alternativa 3"
+                        "value": 12,
+                        "text": "Câmara secreta"
                     }
                 ]
             },
             {
                 "title": "Pergunta 4",
-                "description": "Descrição da pergunta 1",
+                "description": "Qual sua cor preferida?",
                 "alternatives": [
                     {
-                        "id": 1,
-                        "text": "alternativa 0"
+                        "value": 13,
+                        "text": "Vermelho"
                     },
                     {
-                        "id": 2,
-                        "text": "alternativa 1"
+                        "value": 14,
+                        "text": "Verde"
                     },
                     {
-                        "id": 3,
-                        "text": "alternativa 2"
+                        "value": 15,
+                        "text": "Amarelo"
                     },
                     {
-                        "id": 4,
-                        "text": "alternativa 3"
+                        "value": 16,
+                        "text": "Azul"
                     }
                 ]
             },
             {
                 "title": "Pergunta 5",
-                "description": "Descrição da pergunta 1",
+                "description": "Qual materia você mais gostaria?",
                 "alternatives": [
                     {
-                        "id": 1,
-                        "text": "alternativa 0"
+                        "value": 17,
+                        "text": "Defesa Contra as Artes das Trevas"
                     },
                     {
-                        "id": 2,
-                        "text": "alternativa 1"
+                        "value": 18,
+                        "text": "Trato das Criaturas Mágicas"
                     },
                     {
-                        "id": 3,
-                        "text": "alternativa 2"
+                        "value": 19,
+                        "text": "Poções"
                     },
                     {
-                        "id": 4,
-                        "text": "alternativa 3"
+                        "value": 20,
+                        "text": "Herbologia"
                     }
                 ]
             }
         ]
     },
     {
-        "id": "harry_potter1",
-        "title": "Harry Potter",
-        "description": "Descubra qual personagem do harry potter você seria",
-        "bg": "https://images8.alphacoders.com/110/thumb-1920-1102284.jpg",
-        "image": "https://i0.wp.com/media.giphy.com/media/o5HKScC1PflLO/giphy.gif?w=696&ssl=1",
+        "id": "anime_character",
+        "title": "Personagens de Anime",
+        "description": "Descubra qual personagem de anime você seria",
+        "characters": [
+            {
+                "name": "Levi",
+                "description": "Tirando sua preocupação com limpeza, Levi é abrasivo e não muito amigável. Ele raramente demonstra emoções, dando uma impressão fria para os outros. Sua maneira de falar tende a ser precisa e insultuosa, seus comentários são frequentemente grosseiros ou inapropriados, e ele não deixa de provocar ou menosprezar aqueles que se opõem ou o irritam.",
+                "image": "https://kanto.legiaodosherois.com.br/w760-h398-gnw-cfill-q95/wp-content/uploads/2021/10/legiao_rVWJcFlgTSIh.jpg.jpeg",
+                "answers": [
+                    2,
+                    8,
+                    12,
+                    14,
+                    19
+                ]
+            },
+            {
+                "name": "Lawliet, L",
+                "description": "L é muito inteligente, embora sua desarrumada e indiferente aparência mascarem seus grandes poderes dedutivos e muitos questionam suas habilidades e de sua visão. L tende a adivinhar tudo o que é a ele apresentado, e é extremamente meticuloso e analítico.",
+                "image": "https://cdn.pensador.com/img/authors/ld/ea/l-death-note-1-l.jpg",
+                "answers": [
+                    1,
+                    6,
+                    11,
+                    15,
+                    18
+                ]
+            },
+            {
+                "name": "Luffy",
+                "description": "Dois traços dominantes de Luffy são sua aparente falta de inteligência e sua coragem absoluta.A personalidade de Luffy é como a de uma criança, no sentido de que ele tende a ir aos extremos. Ele pode ser extremamente ganancioso, especialmente em casos de comida.",
+                "image": "https://img.quizur.com/f/img6182d4b037c9b2.94544558.jpg?lastEdited=1635964083",
+                "answers": [
+                    3,
+                    7,
+                    11,
+                    15,
+                    17
+                ]
+            },
+            {
+                "name": "Naruto Uzumaki",
+                "description": "Naruto é exuberante, ousado, desatento, descuidado e indiferente para a formalidade ou posições sociais. Naruto é dito ter uma personalidade que atrai as pessoas a ele, tendo uma amizade inspiradora e lealdade que a maioria das pessoas encontram nele através de seus atos de bondade e sinceridade genuína que pode mudar toda visão do mundo de um homem.",
+                "image": "https://falauniversidades.com.br/mrf4u/statics/i/ps/cdn.falauniversidades.com.br/wp-content/uploads/2019/10/naruto-1200x672.jpg",
+                "answers": [
+                    4,
+                    5,
+                    9,
+                    15,
+                    17
+                ]
+            },
+            {
+                "name": "Zero Two",
+                "description": "Zero Two tem uma confiante e assertivo personalidade, bem como sendo consistentemente rebelde para o coletivista.",
+                "image": "https://criticalhits.com.br/wp-content/uploads/2021/06/335d9b9a5abd5135a776047f2796574b-910x512.jpg",
+                "answers": [
+                    2,
+                    5,
+                    12,
+                    13,
+                    20
+                ]
+            }
+        ],
+        "bg": "https://i.pinimg.com/originals/5e/4c/65/5e4c655b9353e0be289273b3e7c4b227.jpg",
+        "image": "https://c.tenor.com/KO6BR15mTv0AAAAC/anime.gif",
         "questions": [
             {
-                "title": "Pergunta 0",
-                "description": "Descrição da pergunta 0",
+                "title": "Pergunta 1",
+                "description": "Qual sua maior qualidade?",
                 "alternatives": [
                     {
-                        "id": 1,
-                        "text": "alternativa 0"
+                        "value": 1,
+                        "text": "Persistência"
                     },
                     {
-                        "id": 2,
-                        "text": "alternativa 1"
+                        "value": 2,
+                        "text": "Coragem"
                     },
                     {
-                        "id": 3,
-                        "text": "alternativa 2"
+                        "value": 3,
+                        "text": "Lealdade"
                     },
                     {
-                        "id": 4,
-                        "text": "alternativa 3"
+                        "value": 4,
+                        "text": "Empatia"
+                    }
+                ]
+            },
+            {
+                "title": "Pergunta 2",
+                "description": "Qual seu pior defeito? ",
+                "alternatives": [
+                    {
+                        "value": 5,
+                        "text": "Teimosia"
+                    },
+                    {
+                        "value": 6,
+                        "text": "Pessimismo"
+                    },
+                    {
+                        "value": 7,
+                        "text": "Medo"
+                    },
+                    {
+                        "value": 8,
+                        "text": "Piedoso de mais"
+                    }
+                ]
+            },
+            {
+                "title": "Pergunta 3",
+                "description": "O que é mais importante pra você?",
+                "alternatives": [
+                    {
+                        "value": 9,
+                        "text": "Família"
+                    },
+                    {
+                        "value": 10,
+                        "text": "Lutas"
+                    },
+                    {
+                        "value": 11,
+                        "text": "Objetivos"
+                    },
+                    {
+                        "value": 12,
+                        "text": "Nada"
+                    }
+                ]
+            },
+            {
+                "title": "Pergunta 4",
+                "description": "Qual sua cor preferida?",
+                "alternatives": [
+                    {
+                        "value": 13,
+                        "text": "Vermelho"
+                    },
+                    {
+                        "value": 14,
+                        "text": "Verde"
+                    },
+                    {
+                        "value": 15,
+                        "text": "Amarelo"
+                    },
+                    {
+                        "value": 16,
+                        "text": "Azul"
+                    }
+                ]
+            },
+            {
+                "title": "Pergunta 5",
+                "description": "Se você visse alguém em perigo o que faria?",
+                "alternatives": [
+                    {
+                        "value": 17,
+                        "text": "Salvaria a pessoa de qualquer jeito"
+                    },
+                    {
+                        "value": 18,
+                        "text": "Faria um plano para salvar"
+                    },
+                    {
+                        "value": 19,
+                        "text": "Ignoraria"
+                    },
+                    {
+                        "value": 20,
+                        "text": "Riria"
                     }
                 ]
             }
         ]
     },
     {
-        "id": "harry_potter2",
-        "title": "Harry Potter",
-        "description": "Descubra qual personagem do harry potter você seria",
-        "bg": "https://images8.alphacoders.com/110/thumb-1920-1102284.jpg",
-        "image": "https://i0.wp.com/media.giphy.com/media/o5HKScC1PflLO/giphy.gif?w=696&ssl=1",
+        "id": "one_piece",
+        "title": "One Piece",
+        "description": "Descubra qual personagem de anime você seria",
+        "characters": [
+            {
+                "name": "Nami",
+                "description": "A 'Gata Ladra' Nami é a navegadora dos Piratas do Chapéu de Palha. Ela foi o terceiro membro da tripulação e a segunda a entrar, fazendo-o durante o Arco Orange Town.",
+                "image": "https://i2.wp.com/nerdizmo.uai.com.br/wp-content/uploads/sites/29/2021/11/nami-one-piece-zoro.jpg?fit=1280%2C720&ssl=1",
+                "answers": [
+                    1,
+                    10,
+                    20,
+                    22,
+                    30,
+                    40,
+                    44,
+                    49,
+                    51,
+                    56,
+                    58,
+                    60
+                ]
+            },
+            {
+                "name": "Nico Robin",
+                "description": "Nico Robin, também conhecida como 'Criança Demônio' e 'Luz da Revolução', é a arqueóloga dos Piratas do Chapéu de Palha. Ela é a única sobrevivente da ilha destruída de Ohara, localizada no West Blue.",
+                "image": "https://trecobox.com.br/wp-content/uploads/2022/01/nicco.jpg",
+                "answers": [
+                    1,
+                    7,
+                    14,
+                    23,
+                    35,
+                    37,
+                    44,
+                    47,
+                    51,
+                    55,
+                    58,
+                    60
+                ]
+            },
+            {
+                "name": "Luffy",
+                "description": "Monkey D. Luffy, também conhecido como Luffy Chapéu de Palha ou Chapéu de Palha,é um pirata e o protagonista do anime e mangá One Piece. Ele é o fundador e o capitão do cada vez mais infame e poderoso Piratas do Chapéu de Palha, bem como um de seus principais lutadores.",
+                "image": "https://tm.ibxk.com.br/2015/09/09/09165955100389.jpg?ims=1200x675",
+                "answers": [
+                    1,
+                    5,
+                    19,
+                    21,
+                    29,
+                    37,
+                    42,
+                    50,
+                    52,
+                    54,
+                    57,
+                    60
+                ]
+            },
+            {
+                "name": "Zoro",
+                "description": "Roronoa Zoro, também conhecido como Caçador de Piratas Zoro, é o combatente dos Piratas do Chapéu de Palha e um ex-caçador de recompensas.",
+                "image": "https://sm.ign.com/ign_br/screenshot/default/maxresdefault_mr89.jpg",
+                "answers": [
+                    4,
+                    9,
+                    20,
+                    26,
+                    34,
+                    40,
+                    41,
+                    46,
+                    52,
+                    53,
+                    57,
+                    62
+                ]
+            },
+            {
+                "name": "Usopp",
+                "description": "God Usopp é o Atirador dos Piratas do Chapéu de Palha. Ele é o quarto membro da tripulação e o terceiro a entrar, fazendo isso no final do Arco Vila Syrup. Embora ele tenha deixado a tripulação durante o Arco Water 7, ele se juntou novamente ao final do Arco Pós-Enies Lobby.",
+                "image": "https://www.einerd.com.br/wp-content/uploads/2021/09/one-piece-usopp-e1631106248403.jpg",
+                "answers": [
+                    1,
+                    6,
+                    18,
+                    28,
+                    30,
+                    40,
+                    45,
+                    48,
+                    51,
+                    55,
+                    57,
+                    60
+                ]
+            },
+            {
+                "name": "Sanji",
+                "description": "Perna Negra Sanji, nascido como Vinsmoke Sanji, e também é o cozinheiro dos Piratas do Chapéu de Palha, assim como um antigo chefe de cozinha do Baratie. Ele também é o terceiro filho e a quarta criança da Família Vinsmoke, tornando-o um príncipe do Reino Germa, até que ele oficialmente os renunciou duas vezes. Apesar de Sanji renunciar ao seu sobrenome Vinsmoke, o Governo Mundial o rotula como parte de seu nome em seu pôster de procurado.",
+                "image": "https://kanto.legiaodosherois.com.br/w728-h381-gnw-cfill-gcc-f:fbcover/wp-content/uploads/2021/10/legiao_ZocRVYD5NAwx.jpg.jpeg",
+                "answers": [
+                    1,
+                    10,
+                    16,
+                    24,
+                    32,
+                    40,
+                    42,
+                    49,
+                    52,
+                    54,
+                    57,
+                    60
+                ]
+            },
+            {
+                "name": "Chopper",
+                "description": "Tony Tony Chopper é uma rena. Ele é o médico da tripulação dos Piratas do Chapéu de Palha. Chopper é uma rena que, após comer a Hito Hito no Mi, adquiriu a habilidade de se transformar e raciocinar como os humanos.Ele é o sexto membro e um dos poucos membros da tripulação que nasceu na Grand Line, numa ilha chamada Drum. ",
+                "image": "https://ovicio.com.br/wp-content/uploads/2020/06/20200618-chopper-one-piece-730x365.jpg",
+                "answers": [
+                    4,
+                    11,
+                    15,
+                    26,
+                    35,
+                    38,
+                    44,
+                    50,
+                    51,
+                    56,
+                    62
+                ]
+            },
+            {
+                "name": "Franky",
+                "description": "Franky é o carpinteiro dos Piratas do Chapéu de Palha. Ele é um cyborg de 36 anos de Water 7 e foi introduzido na história como o líder da Família Franky, um grupo de desmantelamento de navios. Ele foi originalmente chamado de Cutty Flam até trocar seu nome original por seu apelido a pedidos de Iceburg para esconder sua identidade. Franky e seus seguidores foram inicialmente introduzidos como antagonistas do Arco Water 7 contra os Chapéus de Palha até as circunstâncias forçá-los a se tornarem aliados.",
+                "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmtJX0IBheRHfmLwTp5_jwhgGcPLjHpYeHuQ&usqp=CAU",
+                "answers": [
+                    3,
+                    12,
+                    17,
+                    23,
+                    29,
+                    37,
+                    41,
+                    46,
+                    52,
+                    55,
+                    57,
+                    62
+                ]
+            },
+            {
+                "name": "Brook",
+                "description": "Brook é o Músico dos Piratas do Chapéu de Palha. Ele é um esqueleto que os Chapéus de Palha encontraram a bordo de um navio fantasma depois de entrarem no Triângulo Florian. Ele é um usuário de Akuma no Mi que comeu a Yomi Yomi no Mi, o que o torna um pseudo-imortal por causa de seus poderes. Ele é o nono membro do Bando do Chapéu de Palha, e o oitavo a se juntar à tripulação de Luffy. ",
+                "image": "https://static.wixstatic.com/media/1f8f2a_e63789c40dbd4d05999ccdeaa222ccda~mv2.png/v1/fit/w_720%2Ch_480%2Cal_c/file.png",
+                "answers": [
+                    1,
+                    5,
+                    16,
+                    28,
+                    36,
+                    37,
+                    44,
+                    50,
+                    51,
+                    54,
+                    57,
+                    60
+                ]
+            },
+            {
+                "name": "Ace",
+                "description": "Portgas D. Ace, nascido como Gol D. Ace e apelidado de Ace Punhos de Fogo, foi o irmão mais velho adotivo de Luffy e Sabo, e filho do falecido Rei dos Piratas, Gol D. Roger e sua amante, Portgas D. Rouge. ",
+                "image": "https://ovicio.com.br/wp-content/uploads/2021/11/20211116-ovicio-one-piece-ace.jpg",
+                "answers": [
+                    2,
+                    10,
+                    18,
+                    23,
+                    30,
+                    40,
+                    42,
+                    49,
+                    54,
+                    57,
+                    60
+                ]
+            },
+            {
+                "name": "Barba Negra",
+                "description": "Marshall D. Teach, também conhecido como Barba Negra, é o almirante dos Piratas do Barba Negra e um membro dos Yonkou. Ele também é a primeira e única pessoa na história conhecida por ter os poderes de duas Akuma no Mi.",
+                "image": "https://static.wikia.nocookie.net/onepiece/images/f/ff/Marshall_D._Teach_Anime_Post_Timeskip_Infobox.png/revision/latest/scale-to-width-down/350?cb=20200704125822&path-prefix=pt",
+                "answers": [
+                    3,
+                    12,
+                    13,
+                    27,
+                    34,
+                    38,
+                    45,
+                    46,
+                    51,
+                    56,
+                    57,
+                    61
+                ]
+            },
+            {
+                "name": "Shanks",
+                "description": "Shanks, o Ruivo, ou simplesmente Ruivo, é o chefe dos Piratas do Ruivo e um membro dos Yonkou que governam o Novo Mundo. Ele também é um ex-membro dos lendários Piratas do Roger, o único grupo a conquistar com sucesso a Grand Line, que foi onde começou como Pirata Aprendiz.",
+                "image": "https://www.comboinfinito.com.br/principal/wp-content/uploads/2021/11/onepiece-shanks.jpg",
+                "answers": [
+                    4,
+                    8,
+                    20,
+                    21,
+                    32,
+                    39,
+                    45,
+                    46,
+                    52,
+                    55,
+                    57,
+                    61
+                ]
+            }
+        ],
+        "bg": "https://wallpaperaccess.com/full/17350.jpg",
+        "image": "https://c.tenor.com/Tl3lANCfSiYAAAAC/joy-boy-joy-boy-smile.gif",
         "questions": [
             {
-                "title": "Pergunta 0",
-                "description": "Descrição da pergunta 0",
+                "title": "Pergunta 1",
+                "description": "Qual prefere?",
                 "alternatives": [
                     {
-                        "id": 1,
-                        "text": "alternativa 0"
+                        "value": 1,
+                        "text": "Piratas"
                     },
                     {
-                        "id": 2,
-                        "text": "alternativa 1"
+                        "value": 2,
+                        "text": "Marinheiros"
                     },
                     {
-                        "id": 3,
-                        "text": "alternativa 2"
+                        "value": 3,
+                        "text": "Revolucionários"
                     },
                     {
-                        "id": 4,
-                        "text": "alternativa 3"
+                        "value": 4,
+                        "text": "Tanto faz"
+                    }
+                ]
+            },
+            {
+                "title": "Pergunta 2",
+                "description": "Qual dessas palavras combina mais com você?",
+                "alternatives": [
+                    {
+                        "value": 5,
+                        "text": "Comédia"
+                    },
+                    {
+                        "value": 6,
+                        "text": "Amizade"
+                    },
+                    {
+                        "value": 7,
+                        "text": "Mente"
+                    },
+                    {
+                        "value": 8,
+                        "text": "Vingança"
+                    },
+                    {
+                        "value": 9,
+                        "text": "Força"
+                    },
+                    {
+                        "value": 10,
+                        "text": "Carisma"
+                    },
+                    {
+                        "value": 11,
+                        "text": "Sonho"
+                    },
+                    {
+                        "value": 12,
+                        "text": "Conquista"
+                    }
+                ]
+            },
+            {
+                "title": "Pergunta 3",
+                "description": "Escolha uma profissão.",
+                "alternatives": [
+                    {
+                        "value": 13,
+                        "text": "Almirante"
+                    },
+                    {
+                        "value": 14,
+                        "text": "Professor"
+                    },
+                    {
+                        "value": 15,
+                        "text": "Médico"
+                    },
+                    {
+                        "value": 16,
+                        "text": "Cozinheiro"
+                    },
+                    {
+                        "value": 17,
+                        "text": "Mecânico"
+                    },
+                    {
+                        "value": 18,
+                        "text": "Artista"
+                    },
+                    {
+                        "value": 19,
+                        "text": "Vagabundo"
+                    },
+                    {
+                        "value": 20,
+                        "text": "Outro"
+                    }
+                ]
+            },
+            {
+                "title": "Pergunta 4",
+                "description": "Escolha uma cor.",
+                "alternatives": [
+                    {
+                        "value": 21,
+                        "text": "Vermelho"
+                    },
+                    {
+                        "value": 22,
+                        "text": "Verde"
+                    },
+                    {
+                        "value": 23,
+                        "text": "Azul"
+                    },
+                    {
+                        "value": 24,
+                        "text": "Amarelo"
+                    },
+                    {
+                        "value": 25,
+                        "text": "Rosa"
+                    },
+                    {
+                        "value": 26,
+                        "text": "Branco"
+                    },
+                    {
+                        "value": 27,
+                        "text": "Preto"
+                    },
+                    {
+                        "value": 28,
+                        "text": "Outro"
+                    }
+                ]
+            },
+            {
+                "title": "Pergunta 5",
+                "description": "Escolha uma abertura.",
+                "alternatives": [
+                    {
+                        "value": 29,
+                        "text": "We Are (1 abertura)"
+                    },
+                    {
+                        "value": 30,
+                        "text": "Sekai E (3 abertura)"
+                    },
+                    {
+                        "value": 31,
+                        "text": "Brand New World (6 abertura)"
+                    },
+                    {
+                        "value": 32,
+                        "text": "Shere The World (11 abertura)"
+                    },
+                    {
+                        "value": 33,
+                        "text": "One Day (13 abertura)"
+                    },
+                    {
+                        "value": 34,
+                        "text": "Fight Together (14 abertura)"
+                    },
+                    {
+                        "value": 35,
+                        "text": "Hard Knock Days (18 abertura)"
+                    },
+                    {
+                        "value": 36,
+                        "text": "Outra ou nenhuma"
+                    }
+                ]
+            },
+            {
+                "title": "Pergunta 6",
+                "description": "Que tipo de Akuma no mi gostaria de ter?",
+                "alternatives": [
+                    {
+                        "value": 37,
+                        "text": "Paramecia"
+                    },
+                    {
+                        "value": 38,
+                        "text": "Zoan"
+                    },
+                    {
+                        "value": 39,
+                        "text": "Logia"
+                    },
+                    {
+                        "value": 40,
+                        "text": "Nenhuma"
+                    }
+                ]
+            },
+            {
+                "title": "Pergunta 7",
+                "description": "Qual é a melhor qualidade em uma luta na sua opinião?",
+                "alternatives": [
+                    {
+                        "value": 41,
+                        "text": "Força"
+                    },
+                    {
+                        "value": 42,
+                        "text": "Agilidade"
+                    },
+                    {
+                        "value": 43,
+                        "text": "Velocidade"
+                    },
+                    {
+                        "value": 44,
+                        "text": "Foco"
+                    },
+                    {
+                        "value": 45,
+                        "text": "Poder"
+                    }
+                ]
+            },
+            {
+                "title": "Pergunta 8",
+                "description": "O que você mais gosta em One Piece?",
+                "alternatives": [
+                    {
+                        "value": 46,
+                        "text": "Os combates"
+                    },
+                    {
+                        "value": 47,
+                        "text": "A história"
+                    },
+                    {
+                        "value": 48,
+                        "text": "A aventura"
+                    },
+                    {
+                        "value": 49,
+                        "text": "Os personagens"
+                    },
+                    {
+                        "value": 50,
+                        "text": "Tudo"
+                    }
+                ]
+            },
+            {
+                "title": "Pergunta 9",
+                "description": "Você age mais por:",
+                "alternatives": [
+                    {
+                        "value": 51,
+                        "text": "Razão"
+                    },
+                    {
+                        "value": 52,
+                        "text": "Emoção"
+                    }
+                ]
+            },
+            {
+                "title": "Pergunta 10",
+                "description": "Qual é o seu estilo?",
+                "alternatives": [
+                    {
+                        "value": 53,
+                        "text": "Casual"
+                    },
+                    {
+                        "value": 54,
+                        "text": "Chamativo"
+                    },
+                    {
+                        "value": 55,
+                        "text": "Justo"
+                    },
+                    {
+                        "value": 56,
+                        "text": "Nem coloco roupa direito"
+                    }
+                ]
+            },
+            {
+                "title": "Pergunta 11",
+                "description": "Qual é o seu sexo?",
+                "alternatives": [
+                    {
+                        "value": 57,
+                        "text": "Masculino"
+                    },
+                    {
+                        "value": 58,
+                        "text": "Feminino"
+                    },
+                    {
+                        "value": 59,
+                        "text": "Outro"
+                    }
+                ]
+            },
+            {
+                "title": "Pergunta 12",
+                "description": "Do bem ou do mal?",
+                "alternatives": [
+                    {
+                        "value": 60,
+                        "text": "Bem"
+                    },
+                    {
+                        "value": 61,
+                        "text": "Mal"
+                    },
+                    {
+                        "value": 62,
+                        "text": "Neutro"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "pokemon",
+        "title": "Pokémon",
+        "description": "Descubra qual pokemon você seria",
+        "characters": [
+            {
+                "name": "Snorlax",
+                "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/143.png",
+                "description": "Ele não fica satisfeito a menos que coma mais de 880 quilos de comida todos os dias. Quando termina de comer, ele adormece prontamente.",
+                "answers": [
+                    6,
+                    9,
+                    11,
+                    15,
+                    17,
+                    19,
+                    21
+                ]
+            },
+            {
+                "name": "Eevee",
+                "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/133.png",
+                "description": "Tem a capacidade de alterar a composição de seu corpo para se adequar ao ambiente.",
+                "answers": [
+                    6,
+                    8,
+                    12,
+                    14,
+                    16,
+                    20,
+                    22
+                ]
+            },
+            {
+                "name": "Lucario",
+                "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/448.png",
+                "description": "Ele controla ondas conhecidas como auras, que são poderosas o suficiente para pulverizar rochas enormes. Ele usa essas ondas para derrubar seu oponente.",
+                "answers": [
+                    5,
+                    10,
+                    11,
+                    14,
+                    18,
+                    19,
+                    21
+                ]
+            },
+            {
+                "name": "Pikachu",
+                "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png",
+                "description": "A personalidade de Pikachu varia de acordo com a situação, normalmente ele é calmo e alegre, mas, assim como qualquer animal, por instinto, ele não costuma dar muita confiança a estranhos.",
+                "answers": [
+                    4,
+                    8,
+                    12,
+                    14,
+                    16,
+                    20,
+                    22
+                ]
+            },
+            {
+                "name": "Gayrados",
+                "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/130.png",
+                "description": "Tem uma natureza extremamente agressiva. O Hyper Beam que dispara de sua boca incinera totalmente todos os alvos.",
+                "answers": [
+                    2,
+                    9,
+                    13,
+                    14,
+                    16,
+                    19,
+                    21
+                ]
+            }
+        ],
+        "bg": "https://wallpapercave.com/wp/wp10311735.jpg",
+        "image": "https://img1.picmix.com/output/stamp/normal/0/9/0/4/1604090_a14a5.gif",
+        "questions": [
+            {
+                "title": "Pergunta 1",
+                "description": "Escolha um elemento",
+                "alternatives": [
+                    {
+                        "value": 1,
+                        "text": "Fogo"
+                    },
+                    {
+                        "value": 2,
+                        "text": "Água"
+                    },
+                    {
+                        "value": 3,
+                        "text": "Pedra"
+                    },
+                    {
+                        "value": 4,
+                        "text": "Raio"
+                    },
+                    {
+                        "value": 5,
+                        "text": "Lutador"
+                    },
+                    {
+                        "value": 6,
+                        "text": "Normal"
+                    },
+                    {
+                        "value": 7,
+                        "text": "Outro/nenhum"
+                    }
+                ]
+            },
+            {
+                "title": "Pergunta 2",
+                "description": "Em um final de semana você iria:",
+                "alternatives": [
+                    {
+                        "value": 8,
+                        "text": "Brincar com os amigos"
+                    },
+                    {
+                        "value": 9,
+                        "text": "Ficar em casa"
+                    },
+                    {
+                        "value": 10,
+                        "text": "Treinar"
+                    }
+                ]
+            },
+            {
+                "title": "Pergunta 3",
+                "description": "Você é mais:",
+                "alternatives": [
+                    {
+                        "value": 11,
+                        "text": "Calmo(a)"
+                    },
+                    {
+                        "value": 12,
+                        "text": "Agitado(a)"
+                    },
+                    {
+                        "value": 13,
+                        "text": "Bravo(a)"
+                    }
+                ]
+            },
+            {
+                "title": "Pergunta 4",
+                "description": "Em uma batalha pokémon você iria:",
+                "alternatives": [
+                    {
+                        "value": 14,
+                        "text": "Ir com tudo para acabar logo com ele!"
+                    },
+                    {
+                        "value": 15,
+                        "text": "Desviar de seus golpes para ele ficar fraco e então atacar!"
+                    }
+                ]
+            },
+            {
+                "title": "Pergunta 5",
+                "description": "Se você fosse assistir uma batalha pokémon você iria",
+                "alternatives": [
+                    {
+                        "value": 16,
+                        "text": "Torcer o mais alto possivel para seus aliados"
+                    },
+                    {
+                        "value": 17,
+                        "text": "Dormir"
+                    },
+                    {
+                        "value": 18,
+                        "text": "Treinar como se estivesse la dentro"
+                    }
+                ]
+            },
+            {
+                "title": "Pergunta 6",
+                "description": "Se você fosse um pokémon você iria:",
+                "alternatives": [
+                    {
+                        "value": 19,
+                        "text": "Ser um pokémon forte"
+                    },
+                    {
+                        "value": 20,
+                        "text": "Ser um pokémon fofinho"
+                    }
+                ]
+            },
+            {
+                "title": "Pergunta 7",
+                "description": "Imagine que você está prestes a perder uma luta com pouca vida, você iria:",
+                "alternatives": [
+                    {
+                        "value": 21,
+                        "text": "Ir com tudo!"
+                    },
+                    {
+                        "value": 22,
+                        "text": "Fugir"
                     }
                 ]
             }
