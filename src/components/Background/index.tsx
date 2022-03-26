@@ -1,6 +1,12 @@
+import BackgroundDiv from './styles';
 
-export default function Background({ children, }: any) {
+export default function Background({ backgroundUri, children}: BackgroundProps) {
     return (
-        <div>{children}</div>
+        <BackgroundDiv backgroundUri={backgroundUri}>{children}</BackgroundDiv>
     );
 }
+
+type BackgroundProps = {
+    backgroundUri: string;
+    children: JSX.Element;
+};

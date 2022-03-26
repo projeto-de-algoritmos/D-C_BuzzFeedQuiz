@@ -3,6 +3,7 @@ import QuizScreen from '../../src/screens/Quiz';
 import db from '../../assets/db.json';
 import QuizTheme from '../../src/models/QuizTheme';
 import Question from '../../src/models/Question';
+import Background from '../../src/components/Background';
 
 const Quiz: NextPage = ({ quiz }: any) => {
     const quizTheme = new QuizTheme(
@@ -13,7 +14,9 @@ const Quiz: NextPage = ({ quiz }: any) => {
     );
 
     return (
-        <QuizScreen quizTheme={quizTheme} />
+        <Background backgroundUri={quizTheme.backgroundUri}>
+            <QuizScreen quizTheme={quizTheme} />
+        </Background>
     )
 }
 

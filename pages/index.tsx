@@ -1,14 +1,15 @@
 import type { NextPage } from 'next'
 import { useRouter } from 'next/router'
 import { useState } from 'react'
-import { Col, Container, Form, Row } from 'react-bootstrap'
+import { Col, Container, Row } from 'react-bootstrap'
 import ButtonComponent from '../src/components/Button'
 import InputComponent from '../src/components/Input'
 import db from "../assets/db.json"
 import CardComponent from '../src/components/Card'
+import Background from '../src/components/Background'
+import { randint } from '../src/utils/random';
 
-const Home: NextPage = () => {
-
+const Home: NextPage = ({ backgroundUri }: any) => {
   const router = useRouter();
   const [username, setUsername] = useState<string>("");
 
@@ -25,7 +26,7 @@ const Home: NextPage = () => {
   }
 
   return (
-    <>
+    <Background backgroundUri={backgroundUri}>
       <Container className="w-50">
         <CardComponent
           title="Projeto de Algoritmos: Dividir e Conquistar"
@@ -45,7 +46,7 @@ const Home: NextPage = () => {
 
             {db.map((quiz: any) => {
               return (
-                <Col md={4} className='d-flex justify-content-center'>
+                <Col key={quiz.id} md={4} className='d-flex justify-content-center'>
                   <ButtonComponent
                     key={quiz.id}
                     text={quiz.title}
@@ -57,8 +58,18 @@ const Home: NextPage = () => {
           </Row>
         </CardComponent>
       </Container>
-    </>
+    </Background>
   )
 }
 
 export default Home;
+
+export function getServerSideProps(context: any) {
+  const backgroundUri = db[randint(0, db.length-1)].bg;
+
+  return {
+      props: {
+        backgroundUri
+      }
+  }
+}

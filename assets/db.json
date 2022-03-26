@@ -3,7 +3,7 @@
         "id": "harry_potter",
         "title": "Harry Potter",
         "description": "Descubra qual personagem do harry potter você seria",
-        "bg": "link da imagem",
+        "bg": "https://images8.alphacoders.com/110/thumb-1920-1102284.jpg",
         "questions": [
             {
                 "image": "link da imagem",
@@ -33,7 +33,7 @@
         "id": "harry_potter2",
         "title": "Harry Potter",
         "description": "Descubra qual personagem do harry potter você seria",
-        "bg": "link da imagem",
+        "bg": "https://images8.alphacoders.com/110/thumb-1920-1102284.jpg",
         "questions": [
             {
                 "image": "link da imagem",
@@ -52,7 +52,7 @@
         "id": "harry_potter3",
         "title": "Harry Potter",
         "description": "Descubra qual personagem do harry potter você seria",
-        "bg": "link da imagem",
+        "bg": "https://images8.alphacoders.com/110/thumb-1920-1102284.jpg",
         "questions": [
             {
                 "image": "link da imagem",
