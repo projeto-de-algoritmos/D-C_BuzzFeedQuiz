@@ -2,7 +2,7 @@ import { Form } from 'react-bootstrap'
 
 const InputComponent = (props: any) => {
     return (
-        <Form.Group className="mb-3">
+        <Form.Group className='text-center'>
             <Form.Label>{props.label}</Form.Label>
             <Form.Control type="text"
                 placeholder={props.placeholder}
