@@ -5,6 +5,7 @@ const BackgroundDiv = styled.div`
   background-size: cover;
   background-position: center;
   background-image: url(${({ backgroundUri }) => backgroundUri});
+  background-color: grey;
   flex: 1;
   @media screen and (max-width: 500px) {
     background-image: none;

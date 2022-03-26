@@ -4,7 +4,7 @@ import { BsArrowLeftCircle } from 'react-icons/bs';
 import ButtonComponent from "../Button";
 
 const Image = ({ uri }: ImageProps) => {
-    return <Card.Img src={uri} className="mb-3"/>
+    return <Card.Img src={uri} className="mb-3" />
 }
 
 const Title = ({ children }: DefaultProps) => {
@@ -16,15 +16,15 @@ const Description = ({ children }: DefaultProps) => {
 }
 
 const GoBack = ({ onGoBack }: GoBackProps) => {
-    return <ButtonComponent className="ma-3" variant="light" onClick={() => onGoBack()} text={<><BsArrowLeftCircle/> Voltar</>}/>;
+    return <ButtonComponent className="ma-3" variant="light" onClick={() => onGoBack()} text={<><BsArrowLeftCircle /> Voltar</>} />;
 }
 
 const Header = ({ header, onGoBack }: CardProps) => {
     return (
         <Card.Header>
             <Row>
-                <Col md="2">{onGoBack && <GoBack onGoBack={onGoBack}/>}</Col>
-                <Col md="8" className="d-flex text-center justify-content-center align-items-center">{header}</Col>
+                <Col xs="2" md="4">{onGoBack && <GoBack onGoBack={onGoBack} />}</Col>
+                <Col xs="8" md="4" className="d-flex text-center justify-content-center align-items-center">{header}</Col>
             </Row>
         </Card.Header>
     );
@@ -33,7 +33,7 @@ const Header = ({ header, onGoBack }: CardProps) => {
 const CardComponent = ({ header, onGoBack, children }: CardProps) => {
     return (
         <Card className="mt-3 d-flex shadow-lg bg-white rounded">
-            <Header header={header} onGoBack={onGoBack}/>
+            <Header header={header} onGoBack={onGoBack} />
             <Card.Body className="d-flex flex-column">
                 {children}
             </Card.Body>

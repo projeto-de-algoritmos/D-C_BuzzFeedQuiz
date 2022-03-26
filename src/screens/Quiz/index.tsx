@@ -1,10 +1,9 @@
 import QuizTheme from '../../models/QuizTheme';
 import { useState, useEffect, useRef } from 'react'
-import QuizComponent, { QuizComponentProps } from '../../components/Quiz';
+import { QuizComponent, QuizComponentProps } from '../../components/Quiz';
 import Character from '../../models/Character';
 import Loading from '../../components/Loading';
 import Result from '../../components/Result';
-import selectBestCharacter from '../../utils/selectBestCharacter';
 import Alternative from '../../models/Alternative';
 import Widget from '../../components/Widget';
 import CardComponent from '../../components/Card';
@@ -17,14 +16,13 @@ enum ScreenStates {
 }
 
 export default function QuizScreen({ quizTheme }: QuizScreenProps) {
-    const router = useRouter();
     const [screenState, setScreenState] = useState<ScreenStates>(ScreenStates.LOADING);
-    const [result, setResult] = useState<Alternative[]>([]);
-    const [character, setCharacter] = useState<Character>();
-    const totalQuestions = quizTheme.questions.length;
-    const isFirstRun = useRef(true);
+    const [result, setResult] = useState<number[]>([]);
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const currentQuestion = quizTheme.questions[currentQuestionIndex];
+    const totalQuestions = quizTheme.questions.length;
+    const isFirstRun = useRef(true);
+    const router = useRouter();
 
     useEffect(() => {
         setTimeout(() => {
@@ -42,18 +40,17 @@ export default function QuizScreen({ quizTheme }: QuizScreenProps) {
         if (nextQuestion < totalQuestions) {
             setCurrentQuestionIndex(nextQuestion);
         } else {
-            setCharacter(selectBestCharacter(result.map((alternative) => alternative.id), quizTheme.characters));
             setScreenState(ScreenStates.RESULT);
         }
     }, [result]);
 
-    function handleSubmit(alternatives: Alternative[]) {
-        setResult([...result].concat(alternatives));
+    function handleSubmit(value: number) {
+        setResult([...result, value]);
     }
 
     function handleQuizGoBack() {
         if (currentQuestionIndex <= 0) {
-            router.back();
+            router.push("/");
             return;
         }
 
@@ -65,7 +62,7 @@ export default function QuizScreen({ quizTheme }: QuizScreenProps) {
         setTimeout(() => {
             setCurrentQuestionIndex(currentQuestionIndex - 1)
             setScreenState(ScreenStates.QUIZ);
-        }, 500);
+        }, 250);
     }
 
     function getGoBack() {
@@ -81,7 +78,7 @@ export default function QuizScreen({ quizTheme }: QuizScreenProps) {
             <CardComponent header={quizTheme.title} onGoBack={getGoBack()}>
                 {screenState == ScreenStates.QUIZ && <Quiz imageUri={quizTheme.imageUri} question={currentQuestion} onSubmit={handleSubmit} />}
                 {screenState == ScreenStates.LOADING && <Loading />}
-                {screenState == ScreenStates.RESULT && <Result character={character} />}
+                {screenState == ScreenStates.RESULT && <Result result={result} characters={quizTheme.characters} />}
             </CardComponent>
         </Widget>
     );

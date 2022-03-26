@@ -1,9 +1,9 @@
 export default class Alternative {
-    id: number;
+    value: number;
     text: string;
 
-    constructor(id: number, text: string) {
-        this.id = id;
+    constructor(value: number, text: string) {
+        this.value = value;
         this.text = text;
     }
 

@@ -13,22 +13,8 @@ import Widget from '../src/components/Widget'
 
 const Home: NextPage = ({ backgroundUri, quizzes }: any) => {
   const router = useRouter();
-  const [username, setUsername] = useState<string>("");
-  const localStorageUsername = "username";
 
-  useEffect(() => {
-    setUsername(localStorage.getItem(localStorageUsername) ?? "");
-  }, []);
-
-  function handleInput(e: any) {
-    setUsername(e.target.value);
-  }
-
-  function handleSubmit(e: any, id: string) {
-    e.preventDefault();
-
-    localStorage.setItem(localStorageUsername, username);
-
+  function handleSubmit(id: string) {
     router.push(`/quiz?id=${id}`);
   }
 
@@ -43,24 +29,14 @@ const Home: NextPage = ({ backgroundUri, quizzes }: any) => {
             Descubra qual personagem você seria
           </CardComponent.Description>
           <hr />
-
-          <InputComponent
-            label="Insira o seu nome para jogar"
-            placeholder="Nome"
-            value={username}
-            onChange={(e: Event) => handleInput(e)}
-          />
-          <hr />
-
-          <span className='text-center mb-0'>Escolha o tema</span>
+          <h5 className='text-center mb-1'>Escolha o tema</h5>
           <Container className='d-flex justify-content-around'>
             {quizzes.map((quiz: any) => {
               return (
                 <ButtonComponent
                   key={quiz.id}
                   text={quiz.title}
-                  onClick={(e: Event) => handleSubmit(e, quiz.id)}
-                  disabled={username.length < 1} />
+                  onClick={(e: Event) => handleSubmit(quiz.id)} />
               );
             })}
           </Container>
@@ -73,7 +49,7 @@ const Home: NextPage = ({ backgroundUri, quizzes }: any) => {
 export default Home;
 
 export function getServerSideProps(context: any) {
-  const quizzes = db;
+  const quizzes = db.sort((a, b) => a.title.localeCompare(b.title));
   const backgroundUri = quizzes[randint(0, quizzes.length - 1)].bg;
 
   return {
