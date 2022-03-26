@@ -42,7 +42,6 @@ const Home: NextPage = () => {
             </Col>
           </Row>
           <Row>
-
             {db.map((quiz: any) => {
               return (
                 <Col md={4} className='d-flex justify-content-center'>

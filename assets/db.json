@@ -4,27 +4,153 @@
         "title": "Harry Potter",
         "description": "Descubra qual personagem do harry potter você seria",
         "bg": "link da imagem",
+        "characters": [
+            {
+                "name": "Harry Potter",
+                "description": "Descubra qual personagem do harry potter você seria",
+                "image": "link da imagem",
+                "answers": [
+                    0,
+                    1,
+                    2,
+                    2,
+                    3
+                ]
+            },
+            {
+                "name": "Hermione Granger",
+                "description": "Descubra qual personagem do harry potter você seria",
+                "image": "link da imagem",
+                "answers": [
+                    0,
+                    1,
+                    2,
+                    2,
+                    3
+                ]
+            },
+            {
+                "name": "Draco Malfoy",
+                "description": "Descubra qual personagem do harry potter você seria",
+                "image": "link da imagem",
+                "answers": [
+                    0,
+                    0,
+                    2,
+                    2,
+                    3
+                ]
+            },
+            {
+                "name": "Ronald Weasley",
+                "description": "Descubra qual personagem do harry potter você seria",
+                "image": "link da imagem",
+                "answers": [
+                    0,
+                    2,
+                    2,
+                    2,
+                    3
+                ]
+            },
+            {
+                "name": "Severus Snape",
+                "description": "Descubra qual personagem do harry potter você seria",
+                "image": "link da imagem",
+                "answers": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    3
+                ]
+            },
+            {
+                "name": "Severus Snape",
+                "description": "Descubra qual personagem do harry potter você seria",
+                "image": "link da imagem",
+                "answers": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    3
+                ]
+            }
+        ],
         "questions": [
             {
                 "image": "link da imagem",
                 "title": "Pergunta 1",
-                "description": "Descrição da pergunta 1",
+                "description": "Descrição da pergunta 0",
                 "alternatives": [
+                    "alternativa 0",
                     "alternativa 1",
                     "alternativa 2",
-                    "alternativa 3",
-                    "alternativa 4"
+                    "alternativa 3"
                 ]
             },
             {
                 "image": "link da imagem",
                 "title": "Pergunta 2",
-                "description": "Descrição da pergunta 2",
+                "description": "Descrição da pergunta 1",
                 "alternatives": [
+                    "alternativa 0",
                     "alternativa 1",
                     "alternativa 2",
-                    "alternativa 3",
-                    "alternativa 4"
+                    "alternativa 3"
+                ]
+            },
+            {
+                "image": "link da imagem",
+                "title": "Pergunta 3",
+                "description": "Descrição da pergunta 1",
+                "alternatives": [
+                    "alternativa 0",
+                    "alternativa 1",
+                    "alternativa 2",
+                    "alternativa 3"
+                ]
+            },
+            {
+                "image": "link da imagem",
+                "title": "Pergunta 4",
+                "description": "Descrição da pergunta 1",
+                "alternatives": [
+                    "alternativa 0",
+                    "alternativa 1",
+                    "alternativa 2",
+                    "alternativa 3"
+                ]
+            },
+            {
+                "image": "link da imagem",
+                "title": "Pergunta 5",
+                "description": "Descrição da pergunta 1",
+                "alternatives": [
+                    "alternativa 0",
+                    "alternativa 1",
+                    "alternativa 2",
+                    "alternativa 3"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "harry_potter1",
+        "title": "Harry Potter",
+        "description": "Descubra qual personagem do harry potter você seria",
+        "bg": "link da imagem",
+        "questions": [
+            {
+                "image": "link da imagem",
+                "title": "Pergunta 0",
+                "description": "Descrição da pergunta 0",
+                "alternatives": [
+                    "alternativa 0",
+                    "alternativa 1",
+                    "alternativa 2",
+                    "alternativa 3"
                 ]
             }
         ]
@@ -37,32 +163,13 @@
         "questions": [
             {
                 "image": "link da imagem",
-                "title": "Pergunta 1",
-                "description": "Descrição da pergunta 1",
+                "title": "Pergunta 0",
+                "description": "Descrição da pergunta 0",
                 "alternatives": [
+                    "alternativa 0",
                     "alternativa 1",
                     "alternativa 2",
-                    "alternativa 3",
-                    "alternativa 4"
-                ]
-            }
-        ]
-    },
-    {
-        "id": "harry_potter3",
-        "title": "Harry Potter",
-        "description": "Descubra qual personagem do harry potter você seria",
-        "bg": "link da imagem",
-        "questions": [
-            {
-                "image": "link da imagem",
-                "title": "Pergunta 1",
-                "description": "Descrição da pergunta 1",
-                "alternatives": [
-                    "alternativa 1",
-                    "alternativa 2",
-                    "alternativa 3",
-                    "alternativa 4"
+                    "alternativa 3"
                 ]
             }
         ]

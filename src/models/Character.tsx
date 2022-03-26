@@ -3,13 +3,13 @@ export default class Character {
     name: string;
     description: string;
     imageUri: string;
-    answer: number[];
+    answers: number[];
 
-    constructor(title: string, description: string, imageUri: string, answer: number[]) {
-        this.name = title;
+    constructor(name: string, description: string, imageUri: string, answers: number[]) {
+        this.name = name;
         this.description = description;
         this.imageUri = imageUri;
-        this.answer = answer;
+        this.answers = answers;
     }
 
 };
