@@ -13,17 +13,19 @@ export default function Quiz({ question, onSubmit }: QuizProps) {
     }
 
     return (
-        <Container className="w-50">
-            <CardComponent
-                image={question.imageUri}
-                title={question.title}
-                text={question.description}>
-                <Stack gap={1}>
-                    {question.alternatives.map((a, index) => <ButtonComponent variant={index === alternativeSelected ? "primary" : "secondary"} onClick={() => setAlternativeSelected(index)} text={a} />)}
-                </Stack>
-                <ButtonComponent onClick={() => handleSubmit(alternativeSelected)} disabled={alternativeSelected < 0} text="Confirmar" />
-            </ CardComponent>
-        </Container>
+        <CardComponent
+            image={question.imageUri}
+            title={question.title}
+            text={question.description}>
+            <Stack gap={1}>
+                {question.alternatives.map((questionText, index) => <ButtonComponent
+                    key={index}
+                    variant={index === alternativeSelected ? "primary" : "secondary"}
+                    onClick={() => setAlternativeSelected(index)}
+                    text={questionText} />)}
+            </Stack>
+            <ButtonComponent onClick={() => handleSubmit(alternativeSelected)} disabled={alternativeSelected < 0} text="Confirmar" />
+        </ CardComponent>
     )
 }
 

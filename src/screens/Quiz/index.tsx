@@ -1,16 +1,12 @@
 import QuizTheme from '../../models/QuizTheme';
 import Background from '../../components/Background';
 import { useState, useEffect } from 'react'
-import Question from '../../models/Question';
 import QuizComponent from '../../components/Quiz';
-
-function Result() {
-    return <div>Resultado</div>
-}
-
-function Loading() {
-    return <div>Carregando</div>
-}
+import { Container } from 'react-bootstrap';
+import Character from '../../models/Character';
+import { title } from 'process';
+import Loading from '../../components/Loading';
+import Result from '../../components/Result';
 
 enum ScreenStates {
     QUIZ,
@@ -18,10 +14,15 @@ enum ScreenStates {
     RESULT,
 }
 
+type Props = {
+    quizTheme: QuizTheme
+}
+
 export default function QuizScreen({ quizTheme }: Props) {
     const [screenState, setScreenState] = useState<ScreenStates>(ScreenStates.LOADING);
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [result, setResult] = useState<number[]>([]);
+    const [character, setCharacter] = useState<Character>();
     const totalQuestions = quizTheme.questions.length;
 
     console.log(result);
@@ -42,19 +43,18 @@ export default function QuizScreen({ quizTheme }: Props) {
         if (nextQuestion < totalQuestions) {
             setCurrentQuestion(nextQuestion);
         } else {
+            setCharacter(new Character("", "", "", []));
             setScreenState(ScreenStates.RESULT);
         }
     }
 
     return (
         <Background>
-            {screenState == ScreenStates.QUIZ && <QuizComponent question={quizTheme.questions[currentQuestion]} onSubmit={handleSubmit} />}
-            {screenState == ScreenStates.LOADING && <Loading />}
-            {screenState == ScreenStates.RESULT && <Result />}
+            <Container className="w-50">
+                {screenState == ScreenStates.QUIZ && <QuizComponent question={quizTheme.questions[currentQuestion]} onSubmit={handleSubmit} />}
+                {screenState == ScreenStates.LOADING && <Loading />}
+                {screenState == ScreenStates.RESULT && <Result character={character} />}
+            </Container>
         </Background>
     );
-}
-
-type Props = {
-    quizTheme: QuizTheme
 }
