@@ -45,22 +45,14 @@ function mergeSortAndCount(arr: number[], l: number, r: number) {
 }
 
 export default function selectBestCharacter(playerAnswers: number[], characterList: Character[]) {
-    let bestCharacter: Character = characterList[0];;
-    let allAnswers;
-    let bestCount: number = 0;
-    let aux: number = 0;
-    console.log(playerAnswers)
-
-    for (let index = 0; index < playerAnswers.length; index = index + 4) {
-        allAnswers = [...playerAnswers.slice(index, index + 4).concat(characterList[0].answers.slice(index, index + 4))];
-        bestCount += mergeSortAndCount(allAnswers, 0, allAnswers.length - 1);
-    }
+    let bestCharacter: Character = characterList[0];
+    let allAnswers = [...characterList[0].answers, ...playerAnswers];
+    let bestCount: number = mergeSortAndCount(allAnswers, 0, allAnswers.length - 1);
+    let aux: number;
 
     for (let index = 1; index < characterList.length; index++) {
-        for (let index2 = 0; index2 < playerAnswers.length; index2 = index2 + 4) {
-            allAnswers = [...playerAnswers.slice(index2, index2 + 4).concat(characterList[index].answers.slice(index2, index2 + 4))];
-            aux += mergeSortAndCount(allAnswers, 0, allAnswers.length - 1);
-        }
+        allAnswers = [...playerAnswers, ...characterList[index].answers];
+        aux = mergeSortAndCount(allAnswers, 0, allAnswers.length - 1);
 
         if (aux < bestCount) {
             bestCount = aux;
