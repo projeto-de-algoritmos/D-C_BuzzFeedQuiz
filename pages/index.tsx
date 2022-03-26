@@ -8,8 +8,9 @@ import db from "../assets/db.json"
 import CardComponent from '../src/components/Card'
 import Background from '../src/components/Background'
 import { randint } from '../src/utils/random';
+import Widget from '../src/components/Widget'
 
-const Home: NextPage = ({ backgroundUri }: any) => {
+const Home: NextPage = ({ backgroundUri, quizzes }: any) => {
   const router = useRouter();
   const [username, setUsername] = useState<string>("");
 
@@ -27,37 +28,37 @@ const Home: NextPage = ({ backgroundUri }: any) => {
 
   return (
     <Background backgroundUri={backgroundUri}>
-      <Container className="w-50">
-        <CardComponent
-          title="Projeto de Algoritmos: Dividir e Conquistar"
-          text="Seja bem vindo ao Super Quiz! Informe seu nome e escolha o tema:"
-        >
+      <Widget>
+        <CardComponent>
+          <CardComponent.Title>Projeto de Algoritmos: Dividir e Conquistar</CardComponent.Title>
+          <CardComponent.Description>
+            Seja bem vindo ao Super Quiz! Informe seu nome e escolha o tema:
+          </CardComponent.Description>
           <Row>
             <Col>
               <InputComponent
                 label="Nome"
                 placeholder="Insira seu nome"
                 value={username}
-                onChange={(e: any) => handleInput(e)}
+                onChange={(e: Event) => handleInput(e)}
               />
             </Col>
           </Row>
           <Row>
-
-            {db.map((quiz: any) => {
+            {quizzes.map((quiz: any) => {
               return (
                 <Col key={quiz.id} md={4} className='d-flex justify-content-center'>
                   <ButtonComponent
                     key={quiz.id}
                     text={quiz.title}
-                    onClick={(e: any) => handleSubmit(e, quiz.id)}
+                    onClick={(e: Event) => handleSubmit(e, quiz.id)}
                     disabled={username.length < 1} />
                 </Col>
               );
             })}
           </Row>
         </CardComponent>
-      </Container>
+      </Widget>
     </Background>
   )
 }
@@ -65,11 +66,13 @@ const Home: NextPage = ({ backgroundUri }: any) => {
 export default Home;
 
 export function getServerSideProps(context: any) {
-  const backgroundUri = db[randint(0, db.length-1)].bg;
+  const quizzes = db;
+  const backgroundUri = quizzes[randint(0, quizzes.length-1)].bg;
 
   return {
       props: {
-        backgroundUri
+        backgroundUri,
+        quizzes
       }
   }
 }

@@ -1,12 +1,9 @@
-import { Spinner } from "react-bootstrap";
-import CardComponent from "../Card";
+import { Container, Spinner } from "react-bootstrap";
 
 export default function Loading() {
     return (
-        <CardComponent>
-            <div className='text-center'>
-                <Spinner animation="border" />
-            </div>
-        </ CardComponent>
+        <Container className='d-flex justify-content-center align-items-center p-5'>
+            <Spinner animation="border" />
+        </Container>
     );
 }

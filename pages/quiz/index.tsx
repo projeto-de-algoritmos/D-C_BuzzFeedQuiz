@@ -10,6 +10,7 @@ const Quiz: NextPage = ({ quiz }: any) => {
         quiz.title,
         quiz.description,
         quiz.bg,
+        quiz.image,
         quiz.questions.map((question: any) => new Question(question.title, question.description, question.image, question.alternatives))
     );
 

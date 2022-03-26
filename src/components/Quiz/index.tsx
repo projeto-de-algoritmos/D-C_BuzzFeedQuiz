@@ -2,34 +2,45 @@ import Question from '../../models/Question';
 import { useState, useEffect } from 'react'
 import CardComponent from '../Card';
 import ButtonComponent from '../Button';
-import { Container, Stack } from 'react-bootstrap';
+import { Stack } from 'react-bootstrap';
+import Loading from '../Loading';
 
-export default function Quiz({ question, onSubmit }: QuizProps) {
-    const [alternativeSelected, setAlternativeSelected] = useState(-1);
+export function QuizComponent({ question, onSubmit }: QuizComponentProps) {
+    const [isLoading, setIsLoading] = useState<boolean>(true);
 
-    function handleSubmit(index: number) {
-        setAlternativeSelected(-1);
-        onSubmit(index);
+    function handleAlternativeSelected(index: number) {
+        if(isLoading) return;
+        setIsLoading(true);
+        setTimeout(() => {
+            onSubmit(index);
+        }, 500);
+    }
+
+    useEffect(() => {
+        setIsLoading(false);
+    }, [question]);
+
+    if(isLoading){
+        return <Loading/>
     }
 
     return (
-        <CardComponent
-            image={question.imageUri}
-            title={question.title}
-            text={question.description}>
+        <>
+            <CardComponent.Title>{question.title}</CardComponent.Title>
+            <CardComponent.Description>{question.description}</CardComponent.Description>
+
             <Stack gap={1}>
                 {question.alternatives.map((questionText, index) => <ButtonComponent
                     key={index}
-                    variant={index === alternativeSelected ? "primary" : "secondary"}
-                    onClick={() => setAlternativeSelected(index)}
+                    variant="secondary" 
+                    onClick={() => handleAlternativeSelected(index)}
                     text={questionText} />)}
             </Stack>
-            <ButtonComponent onClick={() => handleSubmit(alternativeSelected)} disabled={alternativeSelected < 0} text="Confirmar" />
-        </ CardComponent>
+        </>
     )
 }
 
-type QuizProps = {
-    question: Question,
-    onSubmit: CallableFunction
+export interface QuizComponentProps {
+    question: Question;
+    onSubmit: (index: number) => void;
 }

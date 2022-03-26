@@ -1,12 +1,11 @@
 import QuizTheme from '../../models/QuizTheme';
-import Background from '../../components/Background';
 import { useState, useEffect } from 'react'
-import QuizComponent from '../../components/Quiz';
-import { Container } from 'react-bootstrap';
+import { QuizComponent, QuizComponentProps } from '../../components/Quiz';
 import Character from '../../models/Character';
-import { title } from 'process';
 import Loading from '../../components/Loading';
 import Result from '../../components/Result';
+import Widget from '../../components/Widget';
+import CardComponent from '../../components/Card';
 
 enum ScreenStates {
     QUIZ,
@@ -14,23 +13,18 @@ enum ScreenStates {
     RESULT,
 }
 
-type Props = {
-    quizTheme: QuizTheme
-}
-
-export default function QuizScreen({ quizTheme }: Props) {
+export default function QuizScreen({ quizTheme }: QuizScreenProps) {
     const [screenState, setScreenState] = useState<ScreenStates>(ScreenStates.LOADING);
-    const [currentQuestion, setCurrentQuestion] = useState(0);
+    const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [result, setResult] = useState<number[]>([]);
     const [character, setCharacter] = useState<Character>();
     const totalQuestions = quizTheme.questions.length;
-
-    console.log(result);
+    const currentQuestion = quizTheme.questions[currentQuestionIndex];
 
     useEffect(() => {
         setTimeout(() => {
             setScreenState(ScreenStates.QUIZ);
-        }, 2000);
+        }, 1000);
     }, []);
 
     function handleSubmit(alternativeIndex: number) {
@@ -39,9 +33,9 @@ export default function QuizScreen({ quizTheme }: Props) {
             alternativeIndex
         ])
 
-        const nextQuestion = currentQuestion + 1;
+        const nextQuestion = currentQuestionIndex + 1;
         if (nextQuestion < totalQuestions) {
-            setCurrentQuestion(nextQuestion);
+            setCurrentQuestionIndex(nextQuestion);
         } else {
             setCharacter(new Character("", "", "", []));
             setScreenState(ScreenStates.RESULT);
@@ -49,12 +43,27 @@ export default function QuizScreen({ quizTheme }: Props) {
     }
 
     return (
-        <Background>
-            <Container className="w-50">
-                {screenState == ScreenStates.QUIZ && <QuizComponent question={quizTheme.questions[currentQuestion]} onSubmit={handleSubmit} />}
+        <Widget>
+            <CardComponent header={quizTheme.title}>
+                {screenState == ScreenStates.QUIZ && <Quiz imageUri={quizTheme.imageUri} question={currentQuestion} onSubmit={handleSubmit}/>}
                 {screenState == ScreenStates.LOADING && <Loading />}
                 {screenState == ScreenStates.RESULT && <Result character={character} />}
-            </Container>
-        </Background>
+            </CardComponent>
+        </Widget>
     );
+}
+
+const Quiz = ({ imageUri, question, onSubmit }: QuizProps) => {
+    return <>
+        <CardComponent.Image uri={imageUri} />
+        <QuizComponent question={question} onSubmit={onSubmit} />
+    </>
+}
+
+type QuizScreenProps = {
+    quizTheme: QuizTheme
+}
+
+interface QuizProps extends QuizComponentProps {
+    imageUri: string;
 }
