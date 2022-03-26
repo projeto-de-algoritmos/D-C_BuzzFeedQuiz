@@ -3,12 +3,10 @@
         "id": "harry_potter",
         "title": "Harry Potter",
         "description": "Descubra qual personagem do harry potter você seria",
-        "bg": "link da imagem",
         "characters": [
             {
                 "name": "Harry Potter",
                 "description": "Descubra qual personagem do harry potter você seria",
-                "image": "link da imagem",
                 "answers": [
                     0,
                     1,
@@ -36,7 +34,6 @@
             {
                 "name": "Hermione Granger",
                 "description": "Descubra qual personagem do harry potter você seria",
-                "image": "link da imagem",
                 "answers": [
                     3,
                     1,
@@ -63,7 +60,6 @@
             {
                 "name": "Draco Malfoy",
                 "description": "Descubra qual personagem do harry potter você seria",
-                "image": "link da imagem",
                 "answers": [
                     0,
                     0,
@@ -91,7 +87,6 @@
             {
                 "name": "Ronald Weasley",
                 "description": "Descubra qual personagem do harry potter você seria",
-                "image": "link da imagem",
                 "answers": [
                     0,
                     2,
@@ -119,7 +114,6 @@
             {
                 "name": "Severus Snape",
                 "description": "Descubra qual personagem do harry potter você seria",
-                "image": "link da imagem",
                 "answers": [
                     0,
                     1,
@@ -147,7 +141,6 @@
             {
                 "name": "Severus Snape",
                 "description": "Descubra qual personagem do harry potter você seria",
-                "image": "link da imagem",
                 "answers": [
                     0,
                     0,
@@ -173,9 +166,10 @@
                 ]
             }
         ],
+        "bg": "https://images8.alphacoders.com/110/thumb-1920-1102284.jpg",
+        "image": "https://i0.wp.com/media.giphy.com/media/o5HKScC1PflLO/giphy.gif?w=696&ssl=1",
         "questions": [
             {
-                "image": "link da imagem",
                 "title": "Pergunta 1",
                 "description": "Descrição da pergunta 0",
                 "alternatives": [
@@ -198,7 +192,6 @@
                 ]
             },
             {
-                "image": "link da imagem",
                 "title": "Pergunta 2",
                 "description": "Descrição da pergunta 1",
                 "alternatives": [
@@ -221,7 +214,6 @@
                 ]
             },
             {
-                "image": "link da imagem",
                 "title": "Pergunta 3",
                 "description": "Descrição da pergunta 1",
                 "alternatives": [
@@ -244,7 +236,6 @@
                 ]
             },
             {
-                "image": "link da imagem",
                 "title": "Pergunta 4",
                 "description": "Descrição da pergunta 1",
                 "alternatives": [
@@ -267,7 +258,6 @@
                 ]
             },
             {
-                "image": "link da imagem",
                 "title": "Pergunta 5",
                 "description": "Descrição da pergunta 1",
                 "alternatives": [
@@ -295,10 +285,10 @@
         "id": "harry_potter1",
         "title": "Harry Potter",
         "description": "Descubra qual personagem do harry potter você seria",
-        "bg": "link da imagem",
+        "bg": "https://images8.alphacoders.com/110/thumb-1920-1102284.jpg",
+        "image": "https://i0.wp.com/media.giphy.com/media/o5HKScC1PflLO/giphy.gif?w=696&ssl=1",
         "questions": [
             {
-                "image": "link da imagem",
                 "title": "Pergunta 0",
                 "description": "Descrição da pergunta 0",
                 "alternatives": [
@@ -326,10 +316,10 @@
         "id": "harry_potter2",
         "title": "Harry Potter",
         "description": "Descubra qual personagem do harry potter você seria",
-        "bg": "link da imagem",
+        "bg": "https://images8.alphacoders.com/110/thumb-1920-1102284.jpg",
+        "image": "https://i0.wp.com/media.giphy.com/media/o5HKScC1PflLO/giphy.gif?w=696&ssl=1",
         "questions": [
             {
-                "image": "link da imagem",
                 "title": "Pergunta 0",
                 "description": "Descrição da pergunta 0",
                 "alternatives": [

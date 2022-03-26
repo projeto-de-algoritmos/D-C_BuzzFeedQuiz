@@ -5,7 +5,7 @@ import ButtonComponent from '../Button';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import Alternative from '../../models/Alternative';
 
-export default function Quiz({ question, onSubmit }: QuizProps) {
+export default function QuizComponent({ question, onSubmit }: QuizComponentProps) {
     const [questionAlternatives, setQuestionAlternatives] = useState<Alternative[]>(question.alternatives);
 
     function handleSubmit(questionAlternatives: Alternative[]) {
@@ -23,10 +23,9 @@ export default function Quiz({ question, onSubmit }: QuizProps) {
     }
 
     return (
-        <CardComponent
-            image={question.imageUri}
-            title={question.title}
-            text={question.description}>
+        <CardComponent>
+            <CardComponent.Title>{question.title}</CardComponent.Title>
+            <CardComponent.Description>{question.description}</CardComponent.Description>
             <DragDropContext onDragEnd={handleOnDragEnd}>
                 <Droppable droppableId="characters">
                     {(provided) => (
@@ -54,7 +53,7 @@ export default function Quiz({ question, onSubmit }: QuizProps) {
     )
 }
 
-type QuizProps = {
-    question: Question,
-    onSubmit: CallableFunction
+export interface QuizComponentProps {
+    question: Question;
+    onSubmit: (index: Alternative[]) => void;
 }
