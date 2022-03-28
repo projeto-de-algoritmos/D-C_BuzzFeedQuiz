@@ -34,3 +34,6 @@ O BuzzFeedQuiz consiste na utilização do algoritmo de contagem de inversões p
 Para utilizar o projeto acesse: https://d-c-buzz-feed-quiz.vercel.app/ ou rode os comandos:<br>
 `npm install` <br>
 `npm run dev`
+
+## Referências
+[Algoritmo de contagem de inversões](https://www.geeksforgeeks.org/counting-inversions/)
